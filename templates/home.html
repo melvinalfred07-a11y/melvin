@@ -1,0 +1,19 @@
+<html>
+<body>
+{% for i in pr %}
+{{ i.pid }}<br>
+{% if i in pimg %}
+<img src="{{i.pimg.url}}"width="200">
+{% else %}
+no image found
+{% endif %}
+{{ i.fname }}<br>
+{% if i.files %}
+<a href="{{i.files.url}}"download>download item</a>
+{% else %}
+no files
+{% endif %}
+<hr>
+{% endfor %}
+</body>
+</html>
